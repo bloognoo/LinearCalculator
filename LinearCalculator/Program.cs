@@ -15,16 +15,16 @@ namespace LinearCalculator
                     ");
 
             bool done = false;
-            int total = 0;
+            decimal total = 0;
 
             string expr = "";
-            int number = 0;
+            decimal number = 0;
 
             do {
                 Console.WriteLine("Total: " + total);
                 Console.WriteLine("Enter Expression:");
                 expr = Console.ReadLine();
-                if(expr[0] != '='){number = int.Parse(expr.Substring(1));}
+                if(expr[0] != '='){number = Convert.ToDecimal(expr.Substring(1));}
                 switch (expr[0]) {
                     case '+': total += number; break;
                     case '-': total -= number; break;
